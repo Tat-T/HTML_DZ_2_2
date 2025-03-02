@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 30px;
+}
+
+.fruit-list {
+    background-color: #ed9fae;
+    padding: 25px;
+    max-width:auto;
+    counter-reset: list-counter;/* Сброс счётчика для нумерации */
+}
+
+.fruit-item {
+    background-color: #c66376;
+    padding: 15px;
+    margin: 10px 0;
+    position: relative;
+    list-style: none;
+    counter-increment: list-counter;
+}
+
+.fruit-item::before{
+content: counter(list-counter) ". "; /* Добавляем номер перед текстом элемента */
+background-color: #c66376;
+padding: 5px;
+margin-right: 10px;
+color:white;
+}
+
+.fruit-item span {
+    background-color: #9e354a;
+    padding: 15px;
+}
+
+/* ------------------------ список задач --------------------------------------- */
+
+h1, h1.tdlist{
+    color: #000;
+}
+
+.todolist {
+    list-style: none;
+    padding: 0;
+}
+
+.todolist li {
+    padding: 10px 30px;
+    list-style-image: url("./icons/unchecked_16.png");
+    list-style-position: inside;
+    color: #000;
+}
+
+.todolist li:nth-child(odd) {
+    background-color: #a5ccda;
+}
+
+.todolist li:nth-child(even) {
+    background-color: #add8e6;
+}
+
+.todolist li.done {
+    background-color: #e2e2e2;
+    list-style-image: url("./icons/checked_16.png");
+}
+
+.done span {
+    text-decoration: line-through;
+}
+
+.todolist li button {
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: .9em;
+    padding: 0 5px;
+}
+
+/* --------------------Задание 3------------------ */
+
+p, li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    font-weight: lighter;
+    counter-reset: list-counter; 
+}
+dt{
+    color: gray;
+}
+
+ol{
+    padding: 0 80px;
+}
+
+dd{
+    margin: 0;
+}
+
+.sin{
+    color: #4d20a8;
+}
+
